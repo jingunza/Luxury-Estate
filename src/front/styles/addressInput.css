@@ -1,0 +1,16 @@
+.suggestion-box {
+  background: white;
+  /* position: absolute; */
+  color: black;
+  width: 400px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.suggestion {
+  cursor: pointer;
+  max-width: 400px;
+}
+
+input {
+  width: 800px;
+}

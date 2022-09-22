@@ -1,0 +1,20 @@
+.logo1 {
+  animation: blink-animation1 5s steps(5, start) infinite;
+  animation-timing-function: linear;
+  color: white;
+}
+@keyframes blink-animation1 {
+  to {
+    text-shadow: -10px 0px 5px rgb(212, 208, 208);
+  }
+}
+.logo2 {
+  animation: blink-animation2 5s steps(5, start) infinite;
+  animation-timing-function: linear;
+  color: white;
+}
+@keyframes blink-animation2 {
+  to {
+    text-shadow: 10px 0px 5px rgb(212, 208, 208);
+  }
+}

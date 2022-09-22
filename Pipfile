@@ -17,6 +17,9 @@ flask-cors = "*"
 gunicorn = "*"
 cloudinary = "*"
 flask-admin = "*"
+flask-jwt-extended = "*"
+mapbox = "*"
+stripe = "*"
 
 [requires]
 python_version = "3.8"

@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+}
+
+.banner-test {
+  height: 25%;
+  padding-bottom: 20px;
+  background: linear-gradient(-45deg, #123962, #2754ba, #799eb2, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.profile-pic {
+  height: auto;
+}
+
+.side-link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding-top: 1rem;
+}
+
+.side-link:hover {
+  font-size: 1.35rem;
+}
+
+.card-propiedad {
+  opacity: 0.9;
+}
+.card-mensaje {
+  opacity: 0.9;
+}
+.card-propiedad:hover {
+  opacity: 1;
+  transform: translateY(5px);
+}
+.card-mensaje:hover {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+.contenedor-propiedades {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.contenedor-propiedades::-webkit-scrollbar {
+  width: 7px;
+  background: rgb(237, 237, 237);
+  border-radius: 7px;
+}
+.contenedor-propiedades::-webkit-scrollbar-thumb {
+  width: 7px;
+  background: rgb(196, 196, 196);
+  border-radius: 7px;
+}
+.contenedor-mensajes {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.contenedor-mensajes::-webkit-scrollbar {
+  width: 7px;
+  background: rgb(237, 237, 237);
+  border-radius: 7px;
+}
+.contenedor-mensajes::-webkit-scrollbar-thumb {
+  width: 7px;
+  height: 100px;
+  background: rgb(196, 196, 196);
+  border-radius: 7px;
+}

@@ -1,0 +1,22 @@
+footer div {
+  color: rgb(0, 0, 1);
+  font-size: 1em;
+}
+.logod1 {
+  animation: blink-animationd1 5s steps(5, start) infinite;
+  animation-timing-function: linear;
+}
+@keyframes blink-animationd1 {
+  to {
+    text-shadow: -10px 0px 5px black;
+  }
+}
+.logod2 {
+  animation: blink-animationd2 5s steps(5, start) infinite;
+  animation-timing-function: linear;
+}
+@keyframes blink-animationd2 {
+  to {
+    text-shadow: 10px 0px 5px black;
+  }
+}
