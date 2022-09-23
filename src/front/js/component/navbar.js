@@ -20,9 +20,7 @@ export const Navbar = () => {
   };
 
   return (
-
     <nav className="navbar" style={{ background: "RGB(18,57,98)" }}>
-
       <div className="container">
         <Link to="/" className="text-decoration-none">
           <span onClick={handleClick} className="mb-0">
@@ -34,9 +32,11 @@ export const Navbar = () => {
         {store.token ? (
           <div className="d-flex">
             <Link to={`/user/${userInfo.id}`}>
-              {userInfo.imagen_perfil ? (
+              {JSON.parse(localStorage.getItem("user_info")).imagen_perfil ? (
                 <img
-                  src={JSON.parse(localStorage.getItem("pub_userpic_url"))}
+                  src={
+                    JSON.parse(localStorage.getItem("user_info")).imagen_perfil
+                  }
                   className="img-fluid"
                   style={{
                     width: "60px",

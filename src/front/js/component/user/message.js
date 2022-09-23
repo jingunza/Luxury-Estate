@@ -44,10 +44,7 @@ export const Message = () => {
               </div>
             ))
           ) : (
-            <div
-              className="card text-bg-dark mb-3"
-              style={{ maxWidth: "100%" }}
-            >
+            <div className="card text-bg-secondary mb-3">
               <div className="card-body">
                 <h5 className="card-title">No tienes mensajes aún...</h5>
                 <p className="card-text">

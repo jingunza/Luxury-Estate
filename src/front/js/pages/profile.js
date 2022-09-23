@@ -11,7 +11,7 @@ import "../../styles/profile.css";
 
 export const Profile = () => {
   const { store, actions } = useContext(Context);
-  const userPic = JSON.parse(localStorage.getItem("pub_userpic_url"));
+  const user = JSON.parse(localStorage.getItem("user_info"));
   useEffect(() => {
     actions.syncUserInfo();
   }, []);
@@ -22,9 +22,9 @@ export const Profile = () => {
           <div className="container-fluid">
             <div className="row banner-test">
               <div className="col-sm-3 d-flex justify-content-center">
-                {store.userInfo.imagen_perfil ? (
+                {user.imagen_perfil ? (
                   <img
-                    src={userPic}
+                    src={user.imagen_perfil}
                     className="mt-5 profile-pic"
                     style={{
                       width: "200px",
