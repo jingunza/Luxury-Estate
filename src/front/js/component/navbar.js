@@ -79,12 +79,12 @@ export const Navbar = () => {
           </div>
         ) : (
           <div className="ms-auto">
-            <Link to="/login">
+            <Link to="/login" className="mx-2">
               <a href="#" className="btn btn-primary">
                 Login
               </a>
             </Link>
-            <Link to="/signup">
+            <Link to="/signup" className="mx-2">
               <a href="#" className="btn btn-outline-primary">
                 Signup
               </a>
