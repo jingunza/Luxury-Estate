@@ -12,7 +12,7 @@ export const Login = (props) => {
 
   const handleSubmit = async () => {
     await actions.login(username, password);
-    if (store.isLoggedIn) {
+    if (JSON.parse(localStorage.getItem("isLoggedIn"))) {
       const user = JSON.parse(localStorage.getItem("user_info"));
       navigate(`/user/${user.id}`);
     } else {

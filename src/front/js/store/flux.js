@@ -200,24 +200,20 @@ const getState = ({ getStore, getActions, setStore }) => {
             opts
           );
           if (resp.status !== 200) {
-            throw new Error("Error signing up");
+            throw new Error("Error logging in");
           }
           const data = await resp.json();
           localStorage.setItem("token", data.access_token);
           localStorage.setItem("user_info", JSON.stringify(data.user));
-          localStorage.setItem(
-            "pub_userpic_url",
-            JSON.stringify(data.user.imagen_perfil)
-          );
+          localStorage.setItem("isLoggedIn", JSON.stringify(true));
           setStore({
-            isLoggedIn: true,
             token: data.access_token,
             userInfo: data.user,
           });
           console.log(data.user);
           return true;
         } catch (error) {
-          setStore({ isLoggedIn: false });
+          localStorage.setItem("isLoggedIn", JSON.stringify(false));
         }
       },
       signup: async (username, password, full_name, email) => {

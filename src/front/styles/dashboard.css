@@ -68,3 +68,7 @@
   background-repeat: no-repeat;
   height: 5vw;
 }
+
+.link-feed:hover {
+  cursor: pointer;
+}

@@ -45,7 +45,7 @@ export const Feed = () => {
               ) : (
                 <div
                   onClick={() => pasarAlSingle(index)}
-                  className="main-imagen col-md-5 p-2"
+                  className="main-imagen col-md-5 p-2 link-feed"
                   style={{
                     backgroundImage: `url(${item.fotos[0]})`,
                     height: "46vh",
@@ -56,7 +56,7 @@ export const Feed = () => {
                 <div className="card-body p-0">
                   <div onClick={() => pasarAlSingle(index)}>
                     <div
-                      className="card-title text-primary"
+                      className="card-title text-primary link-feed"
                       style={{ fontSize: "1.3em" }}
                     >
                       {`${item.tipo_vivienda} en ${item.direccion}, ${item.provincia}, ${item.comunidad}`}
