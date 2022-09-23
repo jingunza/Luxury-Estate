@@ -116,10 +116,10 @@ export const Single = () => {
                 <h2 className="card-title fw-bold pb-3 text-black">
                   Descripción de la Propiedad:
                 </h2>
-                <h5 className=" text-black">{`Ubicación: ${elemento.tipo_vivienda} en ${elemento.direccion}`}</h5>
+                <h5 className=" text-black">{`Dirección: ${elemento.tipo_vivienda} en ${elemento.direccion}`}</h5>
                 <h5 className=" text-black">{`Provincia: ${elemento.provincia}`}</h5>
                 <h5 className=" text-black">{`Comunidad Autónoma: ${elemento.comunidad}`}</h5>
-                <h5 className="text-black fw-bolder">
+                <h5 className="text-primary fw-bolder fs-3">
                   {elemento.tipo_operacion == "alquiler" &&
                   periodo == "por meses"
                     ? `${elemento.precio} Euros/mes`
@@ -131,26 +131,30 @@ export const Single = () => {
                     : "Información no encontrada"}
                 </h5>
                 <div className="características wrap pt-2">
-                  <h5 className=" text-black">Características:</h5>
-                  <h5 className="px-4 text-black">{`- Habitaciones: ${elemento.habitaciones}`}</h5>
-                  <h5 className="px-4 text-black">{`- Baños: ${elemento.baños}`}</h5>
+                  <h5 className=" text-black fw-bolder">Características:</h5>
+                  <h5 className="px-4 text-black fw-bolder">{`- Habitaciones: ${elemento.habitaciones}`}</h5>
+                  <h5 className="px-4 text-black fw-bolder">{`- Baños: ${elemento.baños}`}</h5>
                   {elemento.piscina ? (
-                    <h5 className="px-4 text-black">- Piscina</h5>
+                    <h5 className="px-4 text-black fw-bolder">- Piscina</h5>
                   ) : (
                     ""
                   )}
                   {elemento.terraza ? (
-                    <h5 className="px-4 text-black">- Terraza</h5>
+                    <h5 className="px-4 text-black fw-bolder">- Terraza</h5>
                   ) : (
                     ""
                   )}
                   {elemento.garage ? (
-                    <h5 className="px-4 text-black">- Plaza de Garage</h5>
+                    <h5 className="px-4 text-black fw-bolder">
+                      - Plaza de Garage
+                    </h5>
                   ) : (
                     ""
                   )}
                   {elemento.pet ? (
-                    <h5 className="px-4 text-black">- Admite Mascotas</h5>
+                    <h5 className="px-4 text-black fw-bolder">
+                      - Admite Mascotas
+                    </h5>
                   ) : (
                     ""
                   )}
