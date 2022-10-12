@@ -8,7 +8,7 @@ footer div {
 }
 @keyframes blink-animationd1 {
   to {
-    text-shadow: -10px 0px 5px black;
+    text-shadow: -7px 0px 5px black;
   }
 }
 .logod2 {
@@ -17,6 +17,6 @@ footer div {
 }
 @keyframes blink-animationd2 {
   to {
-    text-shadow: 10px 0px 5px black;
+    text-shadow: 7px 0px 5px black;
   }
 }

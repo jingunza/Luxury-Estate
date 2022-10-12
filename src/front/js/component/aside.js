@@ -21,7 +21,7 @@ export const Aside = () => {
     <div className="container col-12 col-lg-3 px-0">
       <div className="formulario container rounded-3 px-0 mt-0 pb-3">
         <div className="titulo container px-3 pt-3 pb-2 text-center">
-          <h4>Tus Preferencias</h4>
+          <h4 className="text-black">Tus Preferencias</h4>
         </div>
         {/* boton */}
         <div className="mx-3 my-2 text-center">

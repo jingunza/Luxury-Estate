@@ -62,15 +62,17 @@ export const CheckoutForm = () => {
     await handleCard();
     await actions.handlePublish();
     const user = JSON.parse(localStorage.getItem("user_info"));
-    navigate(`/user/${user.id}`);
+    if (store.pubSuccess == "Yes") {
+      navigate(`/user/${user.id}`);
+    }
   };
 
   return (
     <div className="card card-body p-4 bg-light">
       <div className="text-start pb-4">
-        <h6>{"Sucripción Luxury Estate Premium:"}</h6>
-        <h4>{" 29.90 Euros"}</h4>
-        <h6>{"Validez: 30 días"}</h6>
+        <h4 className="text-black">{"Sucripción Luxury Estate Premium:"}</h4>
+        <h4 className="text-black">{" 29.90 Euros"}</h4>
+        <h6 className="text-black">{"Validez: 30 días"}</h6>
       </div>
       <CardElement />
       {store.charging == true ? (

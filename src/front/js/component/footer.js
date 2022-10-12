@@ -12,8 +12,8 @@ export const Footer = () => (
     }}
   >
     <div className="container h1 d-flex d-flex justify-content-center my-3">
-      <span className="logod1 display-6 ">LUXURY</span>{" "}
-      <span className="logod2 display-6  ">ESTATE</span>
+      <span className="logod1 display-6 text-black">LUXURY</span>{" "}
+      <span className="logod2 display-6 text-black">ESTATE</span>
     </div>
     <div className="container d-flex py-2 ">
       <Link className="col-4 text-decoration-none" to="/constr">

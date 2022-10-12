@@ -5,7 +5,7 @@
 }
 @keyframes blink-animation1 {
   to {
-    text-shadow: -10px 0px 5px rgb(212, 208, 208);
+    text-shadow: -7px 0px 5px rgb(212, 208, 208);
   }
 }
 .logo2 {
@@ -15,6 +15,6 @@
 }
 @keyframes blink-animation2 {
   to {
-    text-shadow: 10px 0px 5px rgb(212, 208, 208);
+    text-shadow: 7px 0px 5px rgb(212, 208, 208);
   }
 }

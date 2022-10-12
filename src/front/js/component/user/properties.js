@@ -1,10 +1,12 @@
 import React, { useEffect, useContext, useState } from "react";
 import { Context } from "../../store/appContext";
+import { useNavigate } from "react-router-dom";
 
 export const Properties = () => {
   const { store, actions } = useContext(Context);
   const [properties, setProperties] = useState([]);
   const [isloading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProperties = async () => {
@@ -53,8 +55,15 @@ export const Properties = () => {
                     <div className="col-sm-12 col-xl-9 d-flex justify-content-center mb-3 mb-sm-0">
                       <img
                         src={property.fotos[0]}
-                        className="img-thumbnail rounded"
+                        className="img-thumbnail rounded property-foto"
                         style={{ width: "70%", height: "auto" }}
+                        onClick={() => {
+                          localStorage.setItem(
+                            "resp_element",
+                            JSON.stringify(property)
+                          );
+                          navigate("/single/" + property.id);
+                        }}
                       />
                     </div>
                     <div className="col-sm-12">

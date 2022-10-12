@@ -12,7 +12,7 @@ class Publicar_Handler:
         pub_operacion = request["pub_operacion"]
         pub_comunidad = request["pub_comunidad"]
         pub_provincia = request["pub_provincia"]
-        pub_municipio = request["pub_municipio"]
+        # pub_municipio = request["pub_municipio"]
         pub_direccion = request["pub_direccion"]
         pub_longitude = float(request["pub_longitude"])
         pub_latitude = float(request["pub_latitude"])
@@ -29,7 +29,7 @@ class Publicar_Handler:
         pub_premium = bool(request["pub_premium"])
         
         # ------------- CREACION DE NUEVA INSTANCIA--------------------------------------------------------
-        propiedad1 = Inmueble(user_id = user_id, tipo_operacion = pub_operacion, comunidad = pub_comunidad, provincia = pub_provincia, municipio = pub_municipio, direccion = pub_direccion, descripcion = pub_descripcion, precio = pub_precio, tipo_vivienda = pub_vivienda, habitaciones = pub_habitaciones, baños = pub_baños, pet = pub_pet, piscina = pub_piscina, terraza = pub_terraza, garage = pub_garage, latitud = pub_latitude, longitud = pub_longitude, premium = pub_premium)
+        propiedad1 = Inmueble(user_id = user_id, tipo_operacion = pub_operacion, comunidad = pub_comunidad, provincia = pub_provincia, direccion = pub_direccion, descripcion = pub_descripcion, precio = pub_precio, tipo_vivienda = pub_vivienda, habitaciones = pub_habitaciones, baños = pub_baños, pet = pub_pet, piscina = pub_piscina, terraza = pub_terraza, garage = pub_garage, latitud = pub_latitude, longitud = pub_longitude, premium = pub_premium)
         db.session.add(propiedad1)
         db.session.commit() #hasta aqui funciona bien
 

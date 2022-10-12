@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/navbar.css";
-import logoizquierdo from "../../img/logoizquierdo.png";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
@@ -21,7 +20,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navegador" style={{ background: "#123962" }}>
+    <nav className="navbar" style={{ background: "RGB(18,57,98)" }}>
       <div className="container">
         <Link to="/" className="text-decoration-none">
           <span onClick={handleClick} className="mb-0">
@@ -33,9 +32,11 @@ export const Navbar = () => {
         {store.token ? (
           <div className="d-flex">
             <Link to={`/user/${userInfo.id}`}>
-              {userInfo.imagen_perfil ? (
+              {JSON.parse(localStorage.getItem("user_info")).imagen_perfil ? (
                 <img
-                  src={JSON.parse(localStorage.getItem("pub_userpic_url"))}
+                  src={
+                    JSON.parse(localStorage.getItem("user_info")).imagen_perfil
+                  }
                   className="img-fluid"
                   style={{
                     width: "60px",
@@ -78,12 +79,12 @@ export const Navbar = () => {
           </div>
         ) : (
           <div className="ms-auto">
-            <Link to="/login">
+            <Link to="/login" className="mx-2">
               <a href="#" className="btn btn-primary">
                 Login
               </a>
             </Link>
-            <Link to="/signup">
+            <Link to="/signup" className="mx-2">
               <a href="#" className="btn btn-outline-primary">
                 Signup
               </a>

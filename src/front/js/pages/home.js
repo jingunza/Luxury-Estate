@@ -5,7 +5,6 @@ import casa from "../../img/casa-lujo-playa_98.webp";
 import mapita from "../../img/mapita.png";
 import fondo_cards2 from "../../img/fondo_cards2.jpg";
 import listado from "../../img/listado.png";
-import publicar from "../../img/publicar.png";
 
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
@@ -40,11 +39,11 @@ export const Home = () => {
         style={{ backgroundImage: `url(${casa})` }}
       >
         <div
-          className="plantilla container rounded-3 mb-4 text-dark bg-light"
-          style={{ opacity: "0.85" }}
+          className="plantilla container rounded-3 mb-4 text-dark col-7 col-lg-10"
+          style={{ background: "rgba(230,255,240,0.6)" }}
         >
           <div className="titulo container ps-4 pt-3 pb-2">
-            <h3 className="fw-bolder">Elige tu propiedad</h3>
+            <h3 className="fw-bolder text-dark">Elige tu propiedad</h3>
           </div>
 
           {/*--------------------------------------------- INICIO DE LOS FILTROS SELECT ----------------------------------------------*/}
@@ -68,7 +67,7 @@ export const Home = () => {
             {/* comunidad */}
             <div className="selector mx-3">
               <div className="pb-2 text-center">
-                <span className="">Comunidad Autónoma</span>
+                <span className="">Comun. Autónoma</span>
               </div>
               <select
                 onChange={actions.updateComunidad}
@@ -97,6 +96,7 @@ export const Home = () => {
                 className="form-select mb-3"
                 aria-label="Default select example"
                 value={store.provincia}
+                style={{ minWidth: "32vh" }}
               >
                 <option className="">todas</option>
                 {store.listaprovincias.map((elem) => (
@@ -244,12 +244,9 @@ export const Home = () => {
                         style={{ height: "100%" }}
                       />
                     </div>
-                    <div
-                      className="col-md-7"
-                      style={{ background: "RGB(177,212,229)" }}
-                    >
+                    <div className="col-md-7 bg-light">
                       <div className="card-body tarjeta_info">
-                        <h5 className="card-title">
+                        <h5 className="card-title fw-bolder">
                           Encuentra tu vivienda de lujo a sólo un click
                         </h5>
                         <p className="card-text">
@@ -284,13 +281,8 @@ export const Home = () => {
                       />
                     </div>
                     <div className="col-md-7">
-                      <div
-                        className="card-body tarjeta_info"
-                        style={{
-                          background: "RGB(177,212,229)",
-                        }}
-                      >
-                        <h5 className="card-title">
+                      <div className="card-body tarjeta_info bg-light">
+                        <h5 className="card-title fw-bolder">
                           Descubre propiedades por ubicación geográfica
                         </h5>
                         <p className="card-text">
@@ -325,13 +317,8 @@ export const Home = () => {
                       />
                     </div>
                     <div className="col-md-7">
-                      <div
-                        className="card-body tarjeta_info"
-                        style={{
-                          background: "RGB(177,212,229)",
-                        }}
-                      >
-                        <h5 className="card-title">
+                      <div className="card-body tarjeta_info bg-light">
+                        <h5 className="card-title fw-bolder">
                           Quieres alquilar o vender una propiedad?
                         </h5>
                         <p className="card-text">

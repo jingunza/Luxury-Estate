@@ -31,7 +31,7 @@ class Inmueble(db.Model):
     tipo_operacion = db.Column(db.String(80), unique=False, nullable=False)
     comunidad = db.Column(db.String(80), unique=False, nullable=False)
     provincia = db.Column(db.String(80), unique=False, nullable=False)
-    municipio = db.Column(db.String(80), unique=False, nullable=False)
+    # municipio = db.Column(db.String(80), unique=False, nullable=False)
     direccion = db.Column(db.String(300), unique=False, nullable=False)
     descripcion = db.Column(db.String(300), unique=False, nullable=True)
     precio = db.Column(db.Integer, unique=False, nullable=False)
@@ -58,7 +58,7 @@ class Inmueble(db.Model):
             "tipo_operacion": self.tipo_operacion,
             "comunidad": self.comunidad,
             "provincia": self.provincia,
-            "municipio": self.municipio,
+            # "municipio": self.municipio,
             "direccion": self.direccion,
             "descripcion": self.descripcion,
             "precio": self.precio,

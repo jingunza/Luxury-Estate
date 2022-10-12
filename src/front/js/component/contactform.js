@@ -76,10 +76,10 @@ export const ContactForm = () => {
       {!sent ? (
         <div
           className="card"
-          style={{ width: "100%", background: "rgb(228,246,253)" }}
+          style={{ width: "100%", background: "RGB(177,212,229)" }}
         >
-          <div className="card-body p-3">
-            <h5 className="card-title">Pregunta al anunciante</h5>
+          <div className="card-body p-3" style={{ width: "18rem" }}>
+            <h5 className="card-title text-black">Pregunta al anunciante</h5>
             <textarea
               rows={3}
               value={message}
@@ -87,36 +87,48 @@ export const ContactForm = () => {
               className="w-100"
               style={{ width: "100%" }}
             ></textarea>
-            <h6 className="card-subtitle my-2 text-muted">Tu email:</h6>
+            <h6 className="card-subtitle my-2  text-black">Tu email:</h6>
             <input
-              className="list-group-item"
+              className="list-group-item "
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Tu email"
-              style={{ width: "100%" }}
+              style={{
+                width: "100%",
+                background: "white",
+                border: "1px grey solid",
+              }}
             />
-            <h6 className="card-subtitle my-2 text-muted">Tu nombre:</h6>
+            <h6 className="card-subtitle my-2  text-black">Tu nombre:</h6>
             <input
               className="list-group-item"
               value={name}
               required
               onChange={(e) => setName(e.target.value)}
               placeholder="Tu nombre"
-              style={{ width: "100%" }}
+              style={{
+                width: "100%",
+                background: "white",
+                border: "1px grey solid",
+              }}
             />
-            <h6 className="card-subtitle my-2 text-muted">Tu teléfono:</h6>
+            <h6 className="card-subtitle my-2  text-black">Tu teléfono:</h6>
             <input
               className="list-group-item"
               value={phone}
               required
               onChange={(e) => setPhone(e.target.value)}
               placeholder="Tu teléfono"
-              style={{ width: "100%" }}
+              style={{
+                width: "100%",
+                background: "white",
+                border: "1px grey solid",
+              }}
             />
           </div>
           <div className="mb-3">
-            <a href="#" onClick={handleClick} className="btn btn-success">
+            <a href="#" onClick={handleClick} className="btn btn-primary">
               Contactar
             </a>
           </div>

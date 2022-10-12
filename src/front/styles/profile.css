@@ -82,3 +82,7 @@ body {
   background: rgb(196, 196, 196);
   border-radius: 7px;
 }
+
+.property-foto:hover {
+  cursor: pointer;
+}
