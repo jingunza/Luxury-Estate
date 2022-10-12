@@ -16,3 +16,10 @@ body::-webkit-scrollbar-thumb {
   background: rgb(196, 196, 196);
   border-radius: 8px;
 }
+.swal-text {
+  color: black;
+  font-weight: bolder;
+}
+.swal-button {
+  background-color: RGB(72, 176, 234);
+}
