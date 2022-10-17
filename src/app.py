@@ -52,7 +52,7 @@ def handle_invalid_usage(error):
 # generate sitemap with all your endpoints
 @app.route('/')
 def sitemap():
-    if ENV == "development":
+    if ENV == "production":
         return generate_sitemap(app)
     return send_from_directory(static_file_dir, 'index.html')
 
