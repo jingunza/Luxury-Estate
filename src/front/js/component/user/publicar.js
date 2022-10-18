@@ -75,10 +75,10 @@ export const Publicar = () => {
   }, []);
 
   return (
-    <div className="row">
+    <div className="row ms-4 mb-4">
       {localStorage.getItem("token") ? (
         <div
-          className="caja_publicar d-flex justify-content-center col-sm-6"
+          className="caja_publicar ms-5 d-flex justify-content-center col-sm-6"
           style={{ height: "75vh", width: "100vh" }}
         >
           <div className="container col-8 px-0 mt-0 pb-3 w-100 w-md-50">
