@@ -34,65 +34,65 @@ export const Signup = (props) => {
         <div className="col-sm-8 col-lg-6 mt-5 mb-5 pb-5">
           <div className="card w-100 text-bg-secondary mb-5 pb-5">
             <div className="card-body">
-              <h5 className="card-title">Signup</h5>
-              <p className="card-text pt-2">
-                Join us now and start exploring our listings
+              <h5 className="card-title fw-bolder fs-2">Signup</h5>
+              <p className="card-text pt-2 fs-4">
+                Únete y anuncia con nosotros.
               </p>
             </div>
-            <ul className="list-group list-group-flush">
+            <ul className="list-group list-group-flush d-flex flex-column align-items-center">
               <input
-                className="list-group-item w-100"
+                className="list-group-item w-75 my-2"
                 value={fullName}
                 required
                 onChange={(e) => setFullName(e.target.value)}
-                placeholder="Full Name"
+                placeholder="Nombre y Apellidos"
               />
               <input
-                className="list-group-item w-100"
+                className="list-group-item w-75 my-2"
                 value={email}
                 required
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email"
               />
-            </ul>
-            <ul className="list-group list-group-flush">
+
               <input
-                className="list-group-item w-100"
+                className="list-group-item w-75 my-2"
                 value={username}
                 required
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="Username"
+                placeholder="Nombre de Usuario"
               />
               <input
-                className="list-group-item w-100"
+                className="list-group-item w-75 my-2"
                 value={password}
                 required
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
+                placeholder="Contraseña"
               />
               <input
-                className="list-group-item w-100"
+                className="list-group-item w-75 my-2"
                 value={confirmPassword}
                 required
                 type="password"
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                placeholder="Confirm Password"
+                placeholder="Confirma Contraseña"
               />
-            </ul>
-            <div className="card-body d-flex justify-content-around">
-              <a href="#" className="btn btn-primary" onClick={handleSubmit}>
-                Signup
-              </a>
-              <Link to={"/"}>
-                {" "}
-                <a href="#" className="btn btn-info">
+              <div className="card-body d-flex justify-content-around">
+                <a
+                  href="#"
+                  className="btn btn-primary me-5"
+                  onClick={handleSubmit}
+                >
+                  Inscríbete
+                </a>
+                <a href="/" className="btn btn-info ms-5">
                   {" "}
-                  Home{" "}
+                  Inicio{" "}
                 </a>{" "}
-              </Link>
-            </div>
+              </div>
+            </ul>
           </div>
         </div>
       </div>
