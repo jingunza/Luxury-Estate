@@ -41,6 +41,7 @@ export const Edit = () => {
         setPassword("");
       } else if (resp.message == "Updated user succesfully") {
         swal("Datos actualizados");
+        actions.clearSelectedImages();
         setChangePassword(false);
         setPassword("");
       }
@@ -57,82 +58,81 @@ export const Edit = () => {
           <div className="card-body text-center">
             <h5 className="card-title fw-bold text-black">Cambia tus datos</h5>
           </div>
-          <ul className="list-group list-group-flush">
-            <div className="d-flex flex-column align-items-center">
+
+          <div className="d-flex flex-column align-items-center">
+            <input
+              className="w-75 my-2"
+              value={fullName}
+              required
+              onChange={(e) => setFullName(e.target.value)}
+              placeholder="Full Name"
+            />
+            <input
+              className="w-75 my-2"
+              value={email}
+              required
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+            />
+          </div>
+          <div className="fotos_input mx-3 mb-2 mt-2">
+            <label for="formFile" className="form-label pb-2">
+              Subir foto de perfil
+            </label>
+            <input
+              className="form-control w-100"
+              id="formFile"
+              multiple
+              type="file"
+              onChange={actions.uploadImagesToStore}
+            />
+          </div>
+          {changePassword ? (
+            <div className="password-box">
               <input
-                className="list-group-item w-100"
-                value={fullName}
+                className="w-75 my-2"
+                value={password}
                 required
-                onChange={(e) => setFullName(e.target.value)}
-                placeholder="Full Name"
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Nueva Contraseña"
               />
               <input
-                className="list-group-item w-100"
-                value={email}
+                className="w-50 my-2"
+                value={confirmPassword}
                 required
-                type="email"
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
+                type="password"
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Confirma tu Contraseña"
               />
             </div>
-            <div className="fotos_input mx-3 mb-2 mt-2">
-              <label for="formFile" className="form-label pb-2">
-                Subir foto de perfil
-              </label>
-              <input
-                className="form-control w-100"
-                id="formFile"
-                multiple
-                type="file"
-                onChange={actions.uploadImagesToStore}
-              />
-            </div>
-            {changePassword ? (
-              <div className="password-box">
-                <input
-                  className="list-group-item w-100"
-                  value={password}
-                  required
-                  type="password"
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Nueva Contraseña"
-                />
-                <input
-                  className="list-group-item w-50"
-                  value={confirmPassword}
-                  required
-                  type="password"
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  placeholder="Confirma tu Contraseña"
-                />
-              </div>
-            ) : (
-              <a
-                href="#"
-                className="card-link "
-                onClick={() => setChangePassword(true)}
-              >
-                ¿Cambiar Contraseña?
-              </a>
-            )}
-            {deleteUser ? (
-              <a
-                href="#"
-                className="card-link btn btn-outline-danger mt-1"
-                onClick={actions.deleteUser}
-              >
-                Sí, deseo eliminar mi cuenta
-              </a>
-            ) : (
-              <a
-                href="#"
-                className="card-link mt-1"
-                onClick={() => setDeleteUser(true)}
-              >
-                ¿Eliminar cuenta?
-              </a>
-            )}
-          </ul>
+          ) : (
+            <a
+              href="#"
+              className="card-link "
+              onClick={() => setChangePassword(true)}
+            >
+              ¿Cambiar Contraseña?
+            </a>
+          )}
+          {deleteUser ? (
+            <a
+              href="#"
+              className="card-link btn btn-outline-danger mt-1"
+              onClick={actions.deleteUser}
+            >
+              Sí, deseo eliminar mi cuenta
+            </a>
+          ) : (
+            <a
+              href="#"
+              className="card-link mt-1"
+              onClick={() => setDeleteUser(true)}
+            >
+              ¿Eliminar cuenta?
+            </a>
+          )}
           <div className="card-body text-center">
             <a href="#" className="btn btn-info" onClick={handleSubmit}>
               Save
