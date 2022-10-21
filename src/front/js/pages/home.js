@@ -96,7 +96,6 @@ export const Home = () => {
                 className="form-select mb-3"
                 aria-label="Default select example"
                 value={store.provincia}
-                style={{ minWidth: "32vh" }}
               >
                 <option className="">todas</option>
                 {store.listaprovincias.map((elem) => (
