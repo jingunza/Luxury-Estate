@@ -1,16 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Message } from "../component/user/message";
 import { Properties } from "../component/user/properties";
 import { Edit } from "../component/user/edit";
-import { Publicar } from "../component/user/publicar";
+import { Publicar } from "./publicar";
+
 import "bootswatch/dist/cerulean/bootstrap.min.css";
 import "../../styles/profile.css";
 
 export const Profile = () => {
   const { store, actions } = useContext(Context);
+  const navigate = useNavigate();
+
   const user = JSON.parse(localStorage.getItem("user_info"));
   useEffect(() => {
     actions.syncUserInfo();
@@ -101,7 +104,11 @@ export const Profile = () => {
                 >
                   Editar
                 </a>
+
                 <a
+                  onClick={() => {
+                    navigate("/publicar/");
+                  }}
                   className="side-link"
                   id="v-pills-publicar-tab"
                   data-bs-toggle="pill"
@@ -144,15 +151,6 @@ export const Profile = () => {
                   tabindex="0"
                 >
                   <Edit />
-                </div>
-                <div
-                  className="tab-pane fade pb-5 w-100"
-                  id="v-pills-publicar"
-                  role="tabpanel"
-                  aria-labelledby="v-pills-publicar-tab"
-                  tabindex="0"
-                >
-                  <Publicar />
                 </div>
               </div>
             </div>

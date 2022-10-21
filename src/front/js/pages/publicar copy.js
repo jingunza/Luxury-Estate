@@ -1,9 +1,9 @@
 import React, { useEffect, useContext, useState } from "react";
-import { Context } from "../../store/appContext";
+import { Context } from "../store/appContext";
 import swal from "sweetalert";
 import "../../../styles/publicar.css";
 import { useNavigate } from "react-router-dom";
-import { AddressInput } from "../addressInput.js";
+import { AddressInput } from "../component/addressInput.js";
 
 export const Publicar = () => {
   const { store, actions } = useContext(Context);
