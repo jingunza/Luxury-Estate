@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from "react";
-import { Context } from "../../store/appContext";
+import { Context } from "../store/appContext";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -68,11 +68,16 @@ export const CheckoutForm = () => {
   };
 
   return (
-    <div className="card card-body p-4 bg-light">
+    <div
+      className="card card-body p-4"
+      style={{ background: "RGBA(233,236,239,0.8)" }}
+    >
       <div className="text-start pb-4">
-        <h4 className="text-black">{"Sucripción Luxury Estate Premium:"}</h4>
-        <h4 className="text-black">{" 29.90 Euros"}</h4>
-        <h6 className="text-black">{"Validez: 30 días"}</h6>
+        <h4 className="text-black fw-bolder">
+          {"Sucripción Luxury Estate Premium:"}
+        </h4>
+        <h4 className="text-black fw-bolder">{" 29.90 Euros"}</h4>
+        <h6 className="text-black fw-bolder">{"Validez: 30 días"}</h6>
       </div>
       <CardElement />
       {store.charging == true ? (

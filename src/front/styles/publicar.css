@@ -1,4 +1,4 @@
-.caja_selectores {
+/* .caja_selectores {
   overflow-y: scroll;
   height: 60vh;
 }
@@ -10,4 +10,12 @@
   width: 7px;
   height: 100px;
   border-radius: 7px;
+} */
+.contenedor-casa2 {
+  width: auto;
+  min-height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: center;
 }
